@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: smart-alert-api
-          image: ghcr.io/YOUR_USERNAME/k8s-smart-alerting-rag:latest
+          image: ghcr.io/abd-del1/k8s-smart-alerting-rag:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
