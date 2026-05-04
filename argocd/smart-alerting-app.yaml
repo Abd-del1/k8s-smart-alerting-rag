@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: smart-alerting
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/Abd-del1/k8s-smart-alerting-rag.git
+    targetRevision: main
+    path: k8s/base
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: smart-alerting
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
