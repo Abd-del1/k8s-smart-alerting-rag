@@ -1,0 +1,8 @@
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+pydantic==2.10.4
+python-dotenv==1.0.1
+requests==2.32.3
+kubernetes==31.0.0
+openai==1.59.7
+chromadb==0.5.23
